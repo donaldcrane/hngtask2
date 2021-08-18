@@ -28,7 +28,7 @@ app.get('/details',async function(req,res, next){
         const name = "Donald Agbakoba";
         return res.status(200).json({ 
             status: 200,
-            message : `Hi ,y name is ${name}`
+            message : `Hi my name is ${name}`
         });
     } catch (error) {
       next(error);
