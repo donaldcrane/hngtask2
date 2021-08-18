@@ -1,7 +1,7 @@
 # hngtask2
 
-\*name task route
+# name task route
 https://donald-hng.herokuapp.com/details
 
-\*backend task route
+# backend task route
 https://donald-hng.herokuapp.com
