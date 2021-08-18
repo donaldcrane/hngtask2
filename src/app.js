@@ -23,6 +23,19 @@ app.get("/", (req, res) => {
 });
 
 // send message
+app.get('/details',async function(req,res, next){
+    try {
+        const name = "Donald Agbakoba";
+        return res.status(200).json({ 
+            status: 200,
+            message : `Hi ,y name is ${name}`
+        });
+    } catch (error) {
+      next(error);
+    }
+});
+
+// send message
 app.post('/send',async function(req,res, next){
     try {
         const {
@@ -33,7 +46,7 @@ app.post('/send',async function(req,res, next){
         const newMessage = await Message.create({
             name, email,message, phone,
         });
-        return res.status(200).json({ 
+        return res.status(201).json({ 
             status: 201,
             message : `Dear ${name}, Your message has been saved successfully`,
             newMessage
